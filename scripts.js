@@ -1,61 +1,51 @@
-// ================================
-// JAE PORTFOLIO - JAVASCRIPT
-// ================================
+// =========================================================
+// JAE PORTFOLIO — FRONTEND LOGIC PIPELINE
+// =========================================================
+
+document.addEventListener("DOMContentLoaded", () => {
+    
+    // 1. Efficient Header Scroll Tracking
+    const navbar = document.querySelector(".navbar");
+    
+    const handleNavbarScroll = () => {
+        if (window.scrollY > 20) {
+            navbar.style.boxShadow = "0 16px 40px rgba(0, 0, 0, 0.4)";
+            navbar.style.background = "rgba(6, 9, 14, 0.85)";
+        } else {
+            navbar.style.boxShadow = "none";
+            navbar.style.background = "rgba(6, 9, 14, 0.7)";
+        }
+    };
+
+    window.addEventListener("scroll", handleNavbarScroll, { passive: true });
+    handleNavbarScroll(); // Initial execution layer on page load
 
 
-// 1. Add a shadow to the navbar when scrolling
-
-const navbar = document.querySelector(".navbar");
-
-window.addEventListener("scroll", () => {
-    if (window.scrollY > 20) {
-        navbar.style.boxShadow = "0 10px 30px rgba(0, 0, 0, 0.25)";
-    } else {
-        navbar.style.boxShadow = "none";
+    // 2. Automated Dynamic Copyright Lifecycle
+    const footerText = document.querySelector(".footer-container p");
+    if (footerText) {
+        const currentYear = new Date().getFullYear();
+        footerText.textContent = `© ${currentYear} Jubair Ahmed Efty`;
     }
-});
 
 
-// 2. Highlight the current year automatically
-
-const year = new Date().getFullYear();
-
-const footerText = document.querySelector("footer p");
-
-if (footerText) {
-    footerText.textContent = `© ${year} Jubair Ahmed Efty`;
-}
-
-
-// 3. Reveal sections as they enter the screen
-
-const sections = document.querySelectorAll(".section");
-
-const observer = new IntersectionObserver(
-    (entries) => {
-
-        entries.forEach((entry) => {
-
+    // 3. Fluid Section Entrance Observer
+    const sections = document.querySelectorAll(".section");
+    
+    const revealObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
             if (entry.isIntersecting) {
-
                 entry.target.classList.add("visible");
-
-                observer.unobserve(entry.target);
+                observer.unobserve(entry.target); // Stop tracking section instantly once rendered
             }
-
         });
+    }, {
+        threshold: 0.10,
+        rootMargin: "0px 0px -30px 0px"
+    });
 
-    },
-    {
-        threshold: 0.15
-    }
-);
-
-
-sections.forEach((section) => {
-
-    section.classList.add("hidden");
-
-    observer.observe(section);
+    sections.forEach(section => {
+        revealObserver.observe(section);
+    });
 
 });
