@@ -3,16 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jubair Ahmed Efty | Software Engineer Portfolio</title>
+    <meta name="theme-color" content="#06090e">
     <meta name="description" content="Portfolio of Jubair Ahmed Efty, a Computer Science and Engineering student at UIU specializing in AI search simulators, RAG systems, and autonomous robotics.">
+    <title>Jubair Ahmed Efty | Software Engineer Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-    <!-- ================= NAVBAR ================= -->
     <header class="navbar">
-        <a href="#" class="logo">JAE<span class="accent-dot">.</span></a>
-        <nav>
+        <a href="#top" class="logo" aria-label="Jubair Ahmed Efty home">
+            JAE<span class="accent-dot">.</span>
+        </a>
+
+        <nav aria-label="Primary navigation">
             <a href="#about">About</a>
             <a href="#skills">Skills</a>
             <a href="#experience">Experience</a>
@@ -22,102 +24,175 @@
         </nav>
     </header>
 
-    <main>
-        <!-- ================= HERO ================= -->
-        <section class="hero">
+    <main id="top">
+        <section class="hero" aria-labelledby="hero-title">
             <div class="hero-content">
-                <p class="eyebrow">COMPUTER SCIENCE & ENGINEERING STUDENT</p>
-                <h1>Jubair Ahmed Efty</h1>
-                <h2>Building software.<br>Solving real-world problems.</h2>
+                <p class="eyebrow">COMPUTER SCIENCE &amp; ENGINEERING STUDENT</p>
+
+                <h1 id="hero-title">Jubair Ahmed Efty</h1>
+
+                <h2>
+                    Building software.<br>
+                    Solving real-world problems.
+                </h2>
+
                 <p class="hero-text">
-                    CSE major focused on core software engineering architectures, algorithmic problem solving, and building robust, logic-driven systems with tangible impact.
+                    CSE major focused on core software engineering architectures,
+                    algorithmic problem solving, and building robust, logic-driven
+                    systems with tangible impact.
                 </p>
+
                 <div class="hero-buttons">
-                    <a href="#projects" class="button primary">View Projects</a>
-                    <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="button secondary">GitHub</a>
+                    <a href="#projects" class="button primary">
+                        View Projects
+                    </a>
+
+                    <!-- Change this URL if your GitHub username is different. -->
+                    <a
+                        href="https://github.com/jubairae10"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="button secondary"
+                    >
+                        GitHub
+                    </a>
                 </div>
             </div>
         </section>
 
-        <!-- ================= ABOUT ================= -->
-        <section id="about" class="section">
+        <section id="about" class="section" aria-labelledby="about-title">
             <p class="section-label">01 — BACKGROUND</p>
-            <h2>About Me</h2>
+
+            <h2 id="about-title">About Me</h2>
+
             <div class="about-content">
                 <p>
-                    I am a Computer Science and Engineering student at United International University with a deep-seated passion for mathematics, systemic logic, and structural software development.
+                    I am a Computer Science and Engineering student at United
+                    International University with a deep-seated passion for
+                    mathematics, systemic logic, and structural software development.
                 </p>
+
                 <p>
-                    My technical perspective goes beyond surface implementation. I strive to understand exactly how core system patterns function underneath, allowing me to engineer high-utility tools ranging from dynamic search space simulators to autonomous navigation components.
+                    My technical perspective goes beyond surface implementation.
+                    I strive to understand exactly how core system patterns function
+                    underneath, allowing me to engineer high-utility tools ranging
+                    from dynamic search space simulators to autonomous navigation
+                    components.
                 </p>
-                <p>Fluent in English and native in Bengali.</p>
+
+                <p>
+                    Fluent in English and native in Bengali.
+                </p>
             </div>
         </section>
 
-        <!-- ================= SKILLS ================= -->
-        <section id="skills" class="section">
+        <section id="skills" class="section" aria-labelledby="skills-title">
             <p class="section-label">02 — CORE COMPETENCIES</p>
-            <h2>Technical Skills</h2>
+
+            <h2 id="skills-title">Technical Skills</h2>
+
             <div class="skills-grid">
-                <div class="skill-card">
+                <article class="skill-card">
                     <span>01</span>
                     <h3>Languages</h3>
-                    <p>Python, C, C++, Java, JavaScript</p>
-                </div>
-                <div class="skill-card">
+                    <p>
+                        Python, C, C++, Java, JavaScript
+                    </p>
+                </article>
+
+                <article class="skill-card">
                     <span>02</span>
-                    <h3>Frameworks & Tools</h3>
-                    <p>Flask, Streamlit, Git, GitHub, Docker, Linux, ROS 2, ESP32</p>
-                </div>
-                <div class="skill-card">
+                    <h3>Frameworks &amp; Tools</h3>
+                    <p>
+                        Flask, Streamlit, Git, GitHub, Docker, Linux, ROS 2, ESP32
+                    </p>
+                </article>
+
+                <article class="skill-card">
                     <span>03</span>
-                    <h3>Database & AI</h3>
-                    <p>MySQL, SQLite, ChromaDB, RAG Pipelines, Semantic Search, Sentence Transformers, LLM Integration</p>
-                </div>
+                    <h3>Database &amp; AI</h3>
+                    <p>
+                        MySQL, SQLite, ChromaDB, RAG Pipelines, Semantic Search,
+                        Sentence Transformers, LLM Integration
+                    </p>
+                </article>
             </div>
         </section>
 
-        <!-- ================= EXPERIENCE ================= -->
-        <section id="experience" class="section">
+        <section id="experience" class="section" aria-labelledby="experience-title">
             <p class="section-label">03 — FIELD EXPERTISE</p>
-            <h2>Engineering Experience</h2>
+
+            <h2 id="experience-title">Engineering Experience</h2>
+
             <div class="experience-timeline">
-                <div class="experience-card">
+                <article class="experience-card">
                     <div class="exp-header">
                         <div>
                             <h3>Autonomous Systems Intern</h3>
-                            <h4>UIU Mars Rover Team (UMRT)</h4>
+                            <p class="exp-organization">
+                                UIU Mars Rover Team (UMRT)
+                            </p>
                         </div>
-                        <span class="exp-date">Sep 2025 – Jan 2026</span>
+
+                        <span class="exp-date">
+                            Sep 2025 – Jan 2026
+                        </span>
                     </div>
+
                     <ul class="exp-bullets">
-                        <li>Engineered and optimized core autonomous navigation networks inside ROS 2 architectures.</li>
-                        <li>Executed low-level robotics software development and synchronized physical hardware integration pipelines.</li>
-                        <li>Collaborated closely with cross-functional subsystems on real-time edge processing and navigation tasks.</li>
+                        <li>
+                            Engineered and optimized core autonomous navigation
+                            networks inside ROS 2 architectures.
+                        </li>
+
+                        <li>
+                            Executed low-level robotics software development and
+                            synchronized physical hardware integration pipelines.
+                        </li>
+
+                        <li>
+                            Collaborated closely with cross-functional subsystems
+                            on real-time edge processing and navigation tasks.
+                        </li>
                     </ul>
-                </div>
+                </article>
             </div>
         </section>
 
-        <!-- ================= PROJECTS (ANIMATED TRACK) ================= -->
-        <section id="projects" class="section">
+        <section id="projects" class="section" aria-labelledby="projects-title">
             <p class="section-label">04 — SYSTEM PRODUCTIONS</p>
-            <h2>Featured Projects</h2>
-            
-            <div class="projects-marquee">
+
+            <h2 id="projects-title">Featured Projects</h2>
+
+            <div
+                class="projects-marquee"
+                role="region"
+                aria-label="Featured projects"
+            >
                 <div class="marquee-track">
-                    
-                    <!-- Group 1: Original Cards -->
                     <div class="marquee-group">
                         <article class="project-card">
                             <div class="project-top">
                                 <span class="project-number">01</span>
                                 <span class="project-status">AI / LLM</span>
                             </div>
+
                             <h3>PDF RAG Study Assistant</h3>
-                            <p>A Retrieval-Augmented Generation infrastructure parsing local file matrices. Extracts raw textual properties, creates embedded chunk variables, indexes vector points dynamically inside ChromaDB, and coordinates contextual query answers via a Groq LLM endpoint.</p>
+
+                            <p>
+                                A Retrieval-Augmented Generation system that
+                                extracts text from local PDF files, creates
+                                embeddings, indexes vectors in ChromaDB, and
+                                generates contextual answers through a Groq LLM
+                                endpoint.
+                            </p>
+
                             <div class="project-tech">
-                                <span>Python</span><span>Streamlit</span><span>ChromaDB</span><span>Sentence Transformers</span><span>Groq LLM</span>
+                                <span>Python</span>
+                                <span>Streamlit</span>
+                                <span>ChromaDB</span>
+                                <span>Sentence Transformers</span>
+                                <span>Groq LLM</span>
                             </div>
                         </article>
 
@@ -126,10 +201,21 @@
                                 <span class="project-number">02</span>
                                 <span class="project-status">SIMULATOR</span>
                             </div>
+
                             <h3>GridChase Simulator</h3>
-                            <p>An AI modeling system isolating and tracing complex pathfinding algorithms inside dynamic, weighted grids. Visualizes and benchmarks real-time routing logic variations including BFS, Dijkstra, A*, GBFS, Hill Climbing, and Simulated Annealing.</p>
+
+                            <p>
+                                An AI modeling system for tracing pathfinding
+                                algorithms inside dynamic, weighted grids. It
+                                visualizes and benchmarks BFS, Dijkstra, A*, GBFS,
+                                Hill Climbing, and Simulated Annealing.
+                            </p>
+
                             <div class="project-tech">
-                                <span>Python</span><span>Pygame</span><span>AI Search</span><span>Pathfinding</span>
+                                <span>Python</span>
+                                <span>Pygame</span>
+                                <span>AI Search</span>
+                                <span>Pathfinding</span>
                             </div>
                         </article>
 
@@ -138,10 +224,20 @@
                                 <span class="project-number">03</span>
                                 <span class="project-status">FULL-STACK</span>
                             </div>
+
                             <h3>GitStack</h3>
-                            <p>An educational playground system helping developers master distributed version control trees. Simulates sandbox collaboration patterns and practical team-based engineering pipelines interactively.</p>
+
+                            <p>
+                                An educational playground that helps developers
+                                master distributed version control through sandbox
+                                collaboration patterns and practical team-based
+                                engineering workflows.
+                            </p>
+
                             <div class="project-tech">
-                                <span>Full-Stack</span><span>Git Workflows</span><span>Interactive Dev</span>
+                                <span>Full-Stack</span>
+                                <span>Git Workflows</span>
+                                <span>Interactive Dev</span>
                             </div>
                         </article>
 
@@ -150,27 +246,173 @@
                                 <span class="project-number">04</span>
                                 <span class="project-status">AUTOMATION</span>
                             </div>
+
                             <h3>Automated File Organizer</h3>
-                            <p>A script-driven data background utility parsing unmapped local directory indexes to isolate extension signatures, automatically organizing raw assets into categorized target storage nodes.</p>
+
+                            <p>
+                                A Python utility that identifies file extensions
+                                and automatically organizes files into categorized
+                                directories.
+                            </p>
+
                             <div class="project-tech">
-                                <span>Python</span><span>Automation</span><span>I/O Scripts</span>
+                                <span>Python</span>
+                                <span>Automation</span>
+                                <span>File I/O</span>
                             </div>
                         </article>
                     </div>
 
-                    <!-- Group 2: Duplicate Copy for Seamless Ticker Loop -->
+                    <!-- Decorative duplicate used for the continuous animation. -->
                     <div class="marquee-group" aria-hidden="true">
                         <article class="project-card">
                             <div class="project-top">
                                 <span class="project-number">01</span>
                                 <span class="project-status">AI / LLM</span>
                             </div>
+
                             <h3>PDF RAG Study Assistant</h3>
-                            <p>A Retrieval-Augmented Generation infrastructure parsing local file matrices. Extracts raw textual properties, creates embedded chunk variables, indexes vector points dynamically inside ChromaDB, and coordinates contextual query answers via a Groq LLM endpoint.</p>
+
+                            <p>
+                                A Retrieval-Augmented Generation system that
+                                extracts text from local PDF files, creates
+                                embeddings, indexes vectors in ChromaDB, and
+                                generates contextual answers through a Groq LLM
+                                endpoint.
+                            </p>
+
                             <div class="project-tech">
-                                <span>Python</span><span>Streamlit</span><span>ChromaDB</span><span>Sentence Transformers</span><span>Groq LLM</span>
+                                <span>Python</span>
+                                <span>Streamlit</span>
+                                <span>ChromaDB</span>
+                                <span>Sentence Transformers</span>
+                                <span>Groq LLM</span>
                             </div>
                         </article>
 
                         <article class="project-card">
                             <div class="project-top">
+                                <span class="project-number">02</span>
+                                <span class="project-status">SIMULATOR</span>
+                            </div>
+
+                            <h3>GridChase Simulator</h3>
+
+                            <p>
+                                An AI modeling system for tracing pathfinding
+                                algorithms inside dynamic, weighted grids. It
+                                visualizes and benchmarks BFS, Dijkstra, A*, GBFS,
+                                Hill Climbing, and Simulated Annealing.
+                            </p>
+
+                            <div class="project-tech">
+                                <span>Python</span>
+                                <span>Pygame</span>
+                                <span>AI Search</span>
+                                <span>Pathfinding</span>
+                            </div>
+                        </article>
+
+                        <article class="project-card">
+                            <div class="project-top">
+                                <span class="project-number">03</span>
+                                <span class="project-status">FULL-STACK</span>
+                            </div>
+
+                            <h3>GitStack</h3>
+
+                            <p>
+                                An educational playground that helps developers
+                                master distributed version control through sandbox
+                                collaboration patterns and practical team-based
+                                engineering workflows.
+                            </p>
+
+                            <div class="project-tech">
+                                <span>Full-Stack</span>
+                                <span>Git Workflows</span>
+                                <span>Interactive Dev</span>
+                            </div>
+                        </article>
+
+                        <article class="project-card">
+                            <div class="project-top">
+                                <span class="project-number">04</span>
+                                <span class="project-status">AUTOMATION</span>
+                            </div>
+
+                            <h3>Automated File Organizer</h3>
+
+                            <p>
+                                A Python utility that identifies file extensions
+                                and automatically organizes files into categorized
+                                directories.
+                            </p>
+
+                            <div class="project-tech">
+                                <span>Python</span>
+                                <span>Automation</span>
+                                <span>File I/O</span>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="education" class="section" aria-labelledby="education-title">
+            <p class="section-label">05 — ACADEMIC FOUNDATION</p>
+
+            <h2 id="education-title">Education</h2>
+
+            <div class="education-timeline">
+                <article class="education-item">
+                    <span class="edu-year">Current</span>
+
+                    <h3>
+                        Bachelor of Science in Computer Science and Engineering
+                    </h3>
+
+                    <p class="edu-institution">
+                        United International University (UIU)
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <section id="contact" class="section" aria-labelledby="contact-title">
+            <p class="section-label">06 — GET IN TOUCH</p>
+
+            <h2 id="contact-title">
+                Let’s build something useful.
+            </h2>
+
+            <p class="contact-pitch">
+                I am open to discussing software engineering, artificial
+                intelligence, robotics, and practical project collaboration.
+            </p>
+
+            <div class="contact-details">
+                <a
+                    href="https://github.com/jubairae10"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="contact-link"
+                >
+                    View my GitHub profile
+                    <span aria-hidden="true">↗</span>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-container">
+            <p>© 2026 Jubair Ahmed Efty</p>
+            <p>Designed and built with HTML, CSS, and JavaScript.</p>
+        </div>
+    </footer>
+
+    <script src="scripts.js" defer></script>
+</body>
+</html>
