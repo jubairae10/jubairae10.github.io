@@ -1,15 +1,17 @@
 :root {
-    --bg: #06090e;
-    --bg-soft: #0b0f17;
-    --card: rgba(13, 20, 30, 0.45);
-    --border: rgba(255, 255, 255, 0.08);
-    --border-hover: rgba(88, 166, 255, 0.35);
-    --text: #f0f4f8;
-    --text-soft: #b2bfd0;
-    --text-muted: #8190a5;
-    --accent: #58a6ff;
-    --accent-soft: rgba(88, 166, 255, 0.08);
-    --accent-glow: rgba(88, 166, 255, 0.15);
+    --bg: #020718;
+    --bg-soft: #070a25;
+    --card: rgba(16, 15, 48, 0.72);
+    --border: rgba(116, 136, 255, 0.22);
+    --border-hover: rgba(229, 91, 207, 0.72);
+    --text: #f6f3ff;
+    --text-soft: #b4c0df;
+    --text-muted: #8595c1;
+    --accent: #b653e5;
+    --accent-pink: #ef65b4;
+    --accent-blue: #7187ff;
+    --accent-soft: rgba(176, 78, 229, 0.16);
+    --accent-glow: rgba(105, 93, 255, 0.24);
     --max-width: 1120px;
     --radius: 16px;
 }
@@ -27,7 +29,10 @@ html {
 body {
     min-width: 320px;
     overflow-x: hidden;
-    background: var(--bg);
+    background:
+        radial-gradient(circle at 50% -10%, rgba(79, 83, 190, 0.2), transparent 34rem),
+        radial-gradient(circle at 90% 30%, rgba(151, 55, 175, 0.1), transparent 28rem),
+        var(--bg);
     color: var(--text);
     font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     line-height: 1.6;
@@ -62,7 +67,7 @@ a:focus-visible {
     justify-content: space-between;
     gap: 24px;
     border-bottom: 1px solid var(--border);
-    background: rgba(6, 9, 14, 0.7);
+    background: rgba(7, 9, 37, 0.84);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     transition: box-shadow 0.3s ease, background 0.3s ease;
@@ -136,11 +141,9 @@ nav a:focus-visible::after {
     left: 10%;
     width: 450px;
     height: 450px;
-    background: radial-gradient(
-        circle,
-        var(--accent-glow) 0%,
-        transparent 70%
-    );
+    background:
+        radial-gradient(circle at 35% 45%, rgba(105, 134, 255, 0.26), transparent 55%),
+        radial-gradient(circle at 70% 35%, rgba(215, 73, 214, 0.2), transparent 58%);
     content: "";
     filter: blur(60px);
     pointer-events: none;
@@ -170,7 +173,7 @@ nav a:focus-visible::after {
     font-weight: 800;
     letter-spacing: -0.04em;
     line-height: 1.05;
-    background: linear-gradient(180deg, #fff 40%, #cbd5e1 100%);
+    background: linear-gradient(180deg, #ffffff 28%, #d6d5ff 100%);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -248,25 +251,40 @@ nav a:focus-visible::after {
 }
 
 .button.primary {
-    background: #fff;
-    color: #06090e;
+    border: 1px solid rgba(255, 255, 255, 0.32);
+    background: linear-gradient(
+        135deg,
+        var(--accent) 0%,
+        var(--accent-pink) 100%
+    );
+    color: #fff;
+    box-shadow:
+        0 0 0 3px rgba(112, 91, 205, 0.2),
+        0 12px 28px rgba(135, 50, 190, 0.28);
 }
 
 .button.primary:hover {
-    background: var(--accent);
-    box-shadow: 0 12px 24px rgba(88, 166, 255, 0.2);
+    background: linear-gradient(135deg, #c86cf2 0%, #f278c0 100%);
+    box-shadow:
+        0 0 0 3px rgba(112, 91, 205, 0.3),
+        0 16px 34px rgba(194, 54, 201, 0.4);
     transform: translateY(-2px);
 }
 
 .button.secondary {
-    border: 1px solid var(--border);
+    border: 1px solid rgba(113, 135, 255, 0.45);
     background: transparent;
     color: white;
 }
 
 .button.secondary:hover {
-    border-color: var(--accent);
-    background: var(--accent-soft);
+    border-color: var(--accent-pink);
+    background: linear-gradient(
+        135deg,
+        rgba(166, 75, 229, 0.18),
+        rgba(239, 101, 180, 0.12)
+    );
+    box-shadow: 0 0 24px rgba(169, 75, 229, 0.18);
     transform: translateY(-2px);
 }
 
@@ -308,7 +326,11 @@ nav a:focus-visible::after {
 
 .skill-card:hover {
     border-color: var(--border-hover);
-    background: rgba(13, 20, 30, 0.6);
+    background: linear-gradient(
+        145deg,
+        rgba(33, 20, 72, 0.78),
+        rgba(14, 19, 57, 0.82)
+    );
     transform: translateY(-4px);
 }
 
@@ -354,7 +376,7 @@ nav a:focus-visible::after {
 
 .exp-organization {
     margin-top: 4px;
-    color: var(--accent);
+    color: #cf73ef;
     font-size: 1rem;
 }
 
@@ -381,6 +403,11 @@ nav a:focus-visible::after {
     padding: 24px 0;
     position: relative;
     overflow: hidden;
+    background: linear-gradient(
+        180deg,
+        rgba(40, 22, 78, 0.08),
+        transparent 35%
+    );
     mask-image: linear-gradient(
         to right,
         transparent,
@@ -438,7 +465,11 @@ nav a:focus-visible::after {
     justify-content: space-between;
     border: 1px solid var(--border);
     border-radius: var(--radius);
-    background: var(--card);
+    background: linear-gradient(
+        145deg,
+        rgba(28, 19, 67, 0.78),
+        rgba(10, 17, 48, 0.82)
+    );
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
     transition:
@@ -448,7 +479,9 @@ nav a:focus-visible::after {
 
 .project-card:hover {
     border-color: var(--border-hover);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    box-shadow:
+        0 20px 40px rgba(5, 3, 24, 0.55),
+        0 0 30px rgba(184, 72, 214, 0.14);
 }
 
 .project-top {
@@ -462,8 +495,12 @@ nav a:focus-visible::after {
 .project-status {
     padding: 4px 10px;
     border-radius: 99px;
-    background: var(--accent-soft);
-    color: var(--accent);
+    background: linear-gradient(
+        135deg,
+        rgba(170, 78, 229, 0.2),
+        rgba(239, 101, 180, 0.12)
+    );
+    color: #e68cef;
     font-size: 0.65rem;
     font-weight: 700;
     letter-spacing: 0.08em;
@@ -530,19 +567,19 @@ nav a:focus-visible::after {
 }
 
 .contact-link {
-    color: var(--accent);
+    color: #d77df0;
     font-weight: 600;
 }
 
 .contact-link:hover {
-    color: #fff;
+    color: var(--accent-pink);
 }
 
 /* Footer */
 
 .site-footer {
     border-top: 1px solid var(--border);
-    background: var(--bg-soft);
+    background: rgba(7, 10, 37, 0.8);
 }
 
 .footer-container {
